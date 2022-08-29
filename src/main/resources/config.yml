@@ -1,0 +1,19 @@
+# Remember to open the layout in the web editor to change rewards!
+
+gui_title: "Level Board"
+
+# Use this option if you want to enable the /addlevel command. (Useful to modify the value of the given placeholder.)
+# Remember that this is not exclusive. You can use this in combination with the placeholder or as standalone without any placeholder!
+use_command: true
+
+# Use placeholders from external plugins to get the level values!
+# place "none" to only use commands.
+# REQUIRES: PlaceholderAPI
+placeholder: 'none'
+# Some placeholders that work well with this plugin
+# (check plugin page for up-to-date list)
+# Essentials: %example%
+# SkyBlock: %sykblock_lvl%
+# Foo: %foo-tier%
+
+placeholder_multiplier: 1

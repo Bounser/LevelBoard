@@ -1,0 +1,11 @@
+name: LevelBoard
+version: '${project.version}'
+main: me.bounser.levelboard.LevelBoard
+api-version: 1.18
+depend: [ AdvancedGUI ]
+softdepend: [ PlaceholderAPI ]
+authors: [ bounser ]
+description:
+  AdvancedGUI Extension. Layout: LevelBoard
+commands:
+  addlevel:
