@@ -36,7 +36,7 @@ public class PAPIExtension extends PlaceholderExpansion {
 
         if(params.equalsIgnoreCase("level")) {
             return String.valueOf(p == null ? null : ((Integer.parseInt(PAPIUtils.readPlaceholder(p, Data.getInstance().getPlaceholder()))
-                    + data.getBonus(p.getUniqueId())) * Data.getInstance().getMultiplier()));
+                    * Data.getInstance().getMultiplier()) + data.getBonus(p.getUniqueId())));
         }
         if(params.equalsIgnoreCase("extra_levels")) {
             return String.valueOf(p == null ? null : data.getBonus(p.getUniqueId()));
