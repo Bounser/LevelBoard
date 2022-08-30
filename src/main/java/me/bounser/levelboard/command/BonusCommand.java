@@ -46,8 +46,8 @@ public class BonusCommand implements CommandExecutor {
             data.setBonus(uuid, Integer.parseInt(args[1]) + preBonus);
 
             sender.sendMessage(ChatColor.GREEN + "You have added " + ChatColor.GRAY + args[1] + ChatColor.GREEN +
-                    " level(s) to " + ChatColor.GRAY + args[0] + ChatColor.GREEN + ". Now he has " + ChatColor.GRAY +
-                    data.getBonus(uuid) + ChatColor.GREEN + " in total.");
+                    " level(s) to " + ChatColor.GRAY + args[0] + ChatColor.GREEN + ". Now he has a bonus of " + ChatColor.GRAY +
+                    data.getBonus(uuid) + ChatColor.GREEN + " level(s) in total.");
         }
 
         return false;
