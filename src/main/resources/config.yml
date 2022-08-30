@@ -4,15 +4,55 @@
 # Remember that this is not exclusive. You can use this in combination with the placeholder or as standalone without any placeholder!
 use_command: true
 
-# Use placeholders from external plugins to get the level values!
-# place "none" to only use commands.
-# REQUIRES: PlaceholderAPI
-placeholder: 'none'
-# Some example placeholders that work well with this plugin:
-# (check plugin page for up-to-date list)
-# TO DO
-
 # Value that will be multiplied to the placeholder value.
 # Example: if the value is set to 0.1, the placeholder will unlock a level with multipliers of 10 insted of 1
 # Leaving 1 will have no effect.
 placeholder_multiplier: 1
+
+# Use placeholders from external plugins to get the level values!
+# place "none" to only use commands.
+# REQUIRES: PlaceholderAPI
+placeholder: 'none'
+# Some EXAMPLES of placeholders you might be interested in:
+# (check plugin page for up-to-date list)
+
+# EXTENSIONS:
+# %Advancements_completedAmount%            - Expansion: Advancements - Unlocks levels by completing vanilla advancements.
+# %Advancements_completedAmount_<category>% - * - Categories can be: nether, end, story, adventure or husbandry.
+# %localtime_time_<SimpleDateFormat>%       - Expansion: LocalTime - Unlocks levels depending on hour/day/month... Example %localtime_time_dd% to unlock a level every day.
+# %player_exp_to_level%                     - Expansion: Player - Unlocks levels gaining vanilla experience.
+# %statistic_time_played:<Period>%          - Expansion: Statistic - Period can be: days, hours, minutes and seconds.
+# %statistic_player_kills%                  - *
+
+# PLUGINS:
+# %aureliumskills_power%                    - Plugin: Aurelium Skills
+# %aureliumskills_[skill]%                  - *
+# %aureliumskills_[stat]%                   - *
+# %battlepass_tier%                         - Plugin: BattlePass
+# %alonsolevels_level%                      - Plugin: AlonsoLevels
+# %Level_[gamemode]_island_level%           - Plugin: BentoBox - (Requires Level addon)
+# %clanspro_clan_power%                     - Plugin: ClansPro
+# %clansystem_clan_level%                   - Plugin: Clan System
+# %ecocrates_<reward>_wins%                 - Plugin: EcoCrates - (Tracks a possible bonus reward in a crate)
+# %ecoskills_average_skill_level%           - Plugin: EcoSkills
+# %ecoskills_total_skill_level%             - *
+# %ecoskills_<id>%                          - *
+# %epiclevels_level%                        - Plugin: EpicLevels
+# %heroes_level%                            - Plugin: Heroes
+# %jobsr_user_totallevels%                  - Plugin: Jobs
+# %jobsr_user_jlevel_(jname/number)%        - *
+# %karma_score%                             - Plugin: Karma
+# %kingdoms_power%                          - Plugin: KingdomsX
+# %kp-pvp_player_level%                     - Plugin: KP-PVP
+# %mbedwars_stats-wins%                     - Plugin: Marcely's Bedwars
+# %mcjobs_levels%                           - Plugin: MC Job
+# %mcmmo_power_level%                       - Plugin: McMMO
+# %mcmmo_level_<skillname>%                 - *
+# %minechess_wins%                          - Plugin: Mine Chess
+# %mypet_level%                             - Plugin: MyPet
+# %paintball_wins%                          - Plugin: PaintBall Battle
+# %parkour_player_courses_completed%        - Plugin: Parkour
+# %parkour_player_level%                    - *
+
+# Remember that these are all EXAMPLES. You can use whatever placeholder from PlaceholderAPI that you want.
+# Also remember that you can combine placeholders with the bonus command, so you can make quests that give extra levels, bonus rewards at crates...
