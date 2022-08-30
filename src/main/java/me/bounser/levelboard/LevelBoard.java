@@ -24,7 +24,7 @@ public final class LevelBoard extends JavaPlugin {
             getCommand("addlevel").setTabCompleter(new TabComplete());
         }
 
-        this.getLogger().info("Plugin successfully loaded.");
+        this.getLogger().info("[LevelBoard] Plugin successfully loaded.");
     }
 
 }

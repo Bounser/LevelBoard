@@ -3,6 +3,7 @@ package me.bounser.levelboard.tools;
 import de.leonhard.storage.Toml;
 import me.bounser.levelboard.LevelBoard;
 
+import java.util.HashMap;
 import java.util.UUID;
 
 public class Data {
@@ -36,11 +37,21 @@ public class Data {
 
     // toml
 
+    HashMap<UUID, Integer> bonus = new HashMap<>();
+
     public Integer getBonus(UUID uuid) {
-        Integer bonus = toml.getInt(String.valueOf(uuid));
-        return bonus == null ? 0 : bonus;
+        if(bonus.get(uuid) != null){ return bonus.get(uuid); }
+        else {
+            bonus.put(uuid, toml.getInt(String.valueOf(uuid)));
+            return bonus.get(uuid);
+        }
     }
 
-    public void setBonus(UUID uuid, int value){ toml.set(String.valueOf(uuid), value); }
-
+    public void setBonus(UUID uuid, int value) {
+        if (bonus.get(uuid).equals(value)) {
+            return;
+        }
+        toml.set(String.valueOf(uuid), value);
+        bonus.put(uuid, value);
+    }
 }
