@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class TabComplete implements TabCompleter {
+public class BonusTabComplete implements TabCompleter {
 
     static public List<String> getPlayerNames(){
 

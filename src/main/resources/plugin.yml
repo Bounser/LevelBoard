@@ -8,4 +8,4 @@ authors: [ bounser ]
 description:
   AdvancedGUI Extension. Layout: LevelBoard
 commands:
-  addlevel:
+  addbonus:

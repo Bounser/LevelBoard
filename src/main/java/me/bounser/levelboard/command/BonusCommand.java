@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
-public class ModifyCommand implements CommandExecutor {
+public class BonusCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -28,7 +28,7 @@ public class ModifyCommand implements CommandExecutor {
         }
 
         if(args.length != 2){
-            sender.sendMessage(ChatColor.RED + "Invalid use of the command. /addlevel <player> <bonus>");
+            sender.sendMessage(ChatColor.RED + "Invalid use of the command. /addbonus <player> <bonus>");
             return false;
         } else {
             if(Bukkit.getPlayer(args[0]) == null){
