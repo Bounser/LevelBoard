@@ -36,7 +36,10 @@ public class Data {
 
     // toml
 
-    public int getBonus(UUID uuid){ return toml.get(String.valueOf(uuid)) == null ? 0 : (int) toml.get(String.valueOf(uuid)); }
+    public Integer getBonus(UUID uuid) {
+        Integer bonus = toml.getInt(String.valueOf(uuid));
+        return bonus == null ? 0 : bonus;
+    }
 
     public void setBonus(UUID uuid, int value){ toml.set(String.valueOf(uuid), value); }
 

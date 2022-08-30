@@ -35,11 +35,11 @@ public class PAPIExtension extends PlaceholderExpansion {
     public @Nullable String onRequest(OfflinePlayer p, @NotNull String params){
 
         if(params.equalsIgnoreCase("level")) {
-            return String.valueOf(p == null ? null : ((Integer.parseInt(PAPIUtils.readPlaceholder(p, Data.getInstance().getPlaceholder()))
-                    * Data.getInstance().getMultiplier()) + data.getBonus(p.getUniqueId())));
+            return String.valueOf(p == null ? 0 : ((Integer.parseInt(PAPIUtils.readPlaceholder(p, data.getPlaceholder()))
+                    * data.getMultiplier()) + data.getBonus(p.getUniqueId())));
         }
         if(params.equalsIgnoreCase("extra_levels")) {
-            return String.valueOf(p == null ? null : data.getBonus(p.getUniqueId()));
+            return String.valueOf(p == null ? 0 : data.getBonus(p.getUniqueId()));
         }
 
         return null;

@@ -15,18 +15,20 @@ public class ModifyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if(!Data.getInstance().getUseCommand()){
+        Data data = Data.getInstance();
+
+        if(!data.getUseCommand()){
             sender.sendMessage(ChatColor.RED + "Command not enabled.");
             return false;
         }
 
         if(sender instanceof Player && !sender.hasPermission("levelboard.admin")){
-            sender.sendMessage(ChatColor.RED + "You don't have the requiered permission! (levelboard.admin)");
+            sender.sendMessage(ChatColor.RED + "You don't have the required permission! (levelboard.admin)");
             return false;
         }
 
         if(args.length != 2){
-            sender.sendMessage(ChatColor.RED + "Invalid use of the command. /addlevel <player> <levels>");
+            sender.sendMessage(ChatColor.RED + "Invalid use of the command. /addlevel <player> <bonus>");
             return false;
         } else {
             if(Bukkit.getPlayer(args[0]) == null){
@@ -34,17 +36,18 @@ public class ModifyCommand implements CommandExecutor {
                 return false;
             }
             if(!args[1].matches("-?\\d+")){
-                sender.sendMessage(ChatColor.RED + "That level isn`t valid! (Only integers are allowed)");
+                sender.sendMessage(ChatColor.RED + "That bonus isn't valid! (Only integers are allowed)");
+                return false;
             }
-            Data data = Data.getInstance();
 
             UUID uuid = Bukkit.getPlayer(args[0]).getUniqueId();
-            int preBonus = Data.getInstance().getBonus(uuid);
+            int preBonus = data.getBonus(uuid);
 
             data.setBonus(uuid, Integer.parseInt(args[1]) + preBonus);
 
-            sender.sendMessage(ChatColor.GREEN + "You have added " + args[1] + " level(s) to " + args[0] + ". Now he has " + Data.getInstance().getBonus(uuid));
-
+            sender.sendMessage(ChatColor.GREEN + "You have added " + ChatColor.GRAY + args[1] + ChatColor.GREEN +
+                    " level(s) to " + ChatColor.GRAY + args[0] + ChatColor.GREEN + ". Now he has " + ChatColor.GRAY +
+                    data.getBonus(uuid) + ChatColor.GREEN + " in total.");
         }
 
         return false;

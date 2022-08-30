@@ -14,4 +14,5 @@ placeholder: 'none'
 
 # Value that will be multiplied to the placeholder value.
 # Example: if the value is set to 0.1, the placeholder will unlock a level with multipliers of 10 insted of 1
+# Leaving 1 will have no effect.
 placeholder_multiplier: 1
