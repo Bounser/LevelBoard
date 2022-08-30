@@ -42,7 +42,7 @@ public class Data {
     public Integer getBonus(UUID uuid) {
         if(bonus.get(uuid) != null){ return bonus.get(uuid); }
         else {
-            bonus.put(uuid, toml.getInt(String.valueOf(uuid)));
+            bonus.put(uuid, toml.getInt(uuid.toString()));
             return bonus.get(uuid);
         }
     }
@@ -51,7 +51,7 @@ public class Data {
         if (bonus.get(uuid).equals(value)) {
             return;
         }
-        toml.set(String.valueOf(uuid), value);
+        toml.set(uuid.toString(), value);
         bonus.put(uuid, value);
     }
 }
