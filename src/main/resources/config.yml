@@ -1,15 +1,15 @@
 # Remember to open the layout in the web editor to change rewards!
 
-# Use this option if you want to enable the /addlevel command. (Useful to modify the value of the given placeholder.)
-# Remember that this is not exclusive. You can use this in combination with the placeholder or as standalone without any placeholder!
+# Use this option if you want to enable the /addbonus command. (Useful to modify the value of the given placeholder.)
+# Remember that this is not exclusive. You can use this either in conjunction with the placeholder or on its own without one!
 use_command: true
 
 # Value that will be multiplied to the placeholder value.
-# Example: if the value is set to 0.1, the placeholder will unlock a level with multipliers of 10 insted of 1
+# Example: if the value is set to 0.1, the placeholder will unlock a level with multipliers of 10 instead of 1
 # Leaving 1 will have no effect.
 placeholder_multiplier: 1
 
-# Use placeholders from external plugins to get the level values!
+# Use placeholders from expansions/external plugins to get the level value!
 # place "none" to only use commands.
 # REQUIRES: PlaceholderAPI
 placeholder: 'none'
@@ -19,7 +19,7 @@ placeholder: 'none'
 # EXTENSIONS:
 # %Advancements_completedAmount%            - Expansion: Advancements - Unlocks levels by completing vanilla advancements.
 # %Advancements_completedAmount_<category>% - * - Categories can be: nether, end, story, adventure or husbandry.
-# %localtime_time_<SimpleDateFormat>%       - Expansion: LocalTime - Unlocks levels depending on hour/day/month... Example %localtime_time_dd% to unlock a level every day.
+# %localtime_time_<SimpleDateFormat>%       - Expansion: LocalTime - Unlocks levels depending on hour/day/month... Example %localtime_time_dd% to unlock a level every day of the month
 # %player_exp_to_level%                     - Expansion: Player - Unlocks levels gaining vanilla experience.
 # %statistic_time_played:<Period>%          - Expansion: Statistic - Period can be: days, hours, minutes and seconds.
 # %statistic_player_kills%                  - *
@@ -54,5 +54,5 @@ placeholder: 'none'
 # %parkour_player_courses_completed%        - Plugin: Parkour
 # %parkour_player_level%                    - *
 
-# Remember that these are all EXAMPLES. You can use whatever placeholder from PlaceholderAPI that you want.
+# Remember that these are all EXAMPLES. You can choose any placeholder you want from PlaceholderAPI. *(That returns a number)*
 # Also remember that you can combine placeholders with the bonus command, so you can make quests that give extra levels, bonus rewards at crates...
